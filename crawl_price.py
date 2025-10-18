@@ -1,6 +1,7 @@
 import requests
 import pandas as pd
 import time
+from datetime import datetime
 
 # ===== 材质字典 =====
 material_list = [
@@ -25,7 +26,8 @@ headers = {
 
 # ===== 常量 =====
 TOKEN = "7ZpK0G0OQvKkpMo06BvQkLm9WwZierceVJIwQyqo+valiY6QWwIQtuv0vCHwuwWF"
-DATE = "2025-10-17"
+# 自动获取当前时区的最新日期
+DATE = datetime.now().strftime("%Y-%m-%d")
 
 # ===== 存储所有结果 =====
 all_records = []
